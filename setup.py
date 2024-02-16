@@ -53,7 +53,7 @@ class CMakeBuild(build_ext):
         os.makedirs(BUILD_TEMP)
 
         if version.parse(self.get_cmake_version()) < version.parse("3.22.0"):
-            cmake_passthru_flag = "--"
+            cmake_passthru_flag = "-s"
         else:
             cmake_passthru_flag = "-S"
 
